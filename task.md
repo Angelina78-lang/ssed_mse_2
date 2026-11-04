@@ -85,40 +85,14 @@
 -   Verify that no service other than the gateway is exposed on public
     host interfaces.
 
-## 7. Debugging
-
--   Use the provided `debug-pack` folder.
--   Start the supplied stack with Docker Compose.
--   Identify and fix all three faults.
--   Use relevant Docker commands to investigate the faults, including:
-    -   `docker compose logs`
-    -   `docker inspect`
-    -   `docker network inspect`
-    -   `docker compose exec`
-    -   `docker compose config`
--   Create `FAULTS.md` and record for each fault:
-    -   The symptom observed.
-    -   The command that revealed the cause.
-    -   The one-line fix.
--   Verify that the application loads, registrations produce emails in
-    MailHog, and uploaded images display correctly.
-
-## 8. AI Usage Log
-
--   Create `AI_LOG.md`.
--   Record 3 to 5 important AI prompts.
--   For each prompt, describe what the AI produced.
--   Record what the AI got wrong or what you changed.
--   Explain how you verified the fix.
-
-## 9. README
+## 7. README
 
 -   Create `README.md`.
 -   Explain how to run the stack.
 -   Include a short architecture sketch or service list.
 -   Document three design decisions and the reason for each.
 
-## 10. Final Verification
+## 8. Final Verification
 
 -   Start the complete stack using
     `docker compose up -d --build --wait`.
@@ -137,23 +111,9 @@
 -   Verify that only one port is published publicly.
 -   Verify that the API image is under 250 MB.
 -   Verify that no secrets are hardcoded.
+-   Verify the test cases by running grade.sh file
 
-## 11. Deliverables
-
--   Git repository or ZIP containing all Dockerfiles.
--   `.dockerignore` files for the build contexts.
--   `docker-compose.yml`.
--   Gateway configuration.
--   `.env.example`.
--   `README.md`.
--   `AI_LOG.md`.
--   `FAULTS.md`.
--   The fixed `debug-pack`.
--   Screenshot of the MailHog inbox showing a confirmation email.
--   Screenshot of the RabbitMQ queue page.
--   Screenshot of the MinIO bucket containing an uploaded file.
-
-## 12. Optional Enhancements
+## 9. Optional Enhancements
 
 -   Add Compose profiles or an override file to separate development and
     production behaviour.
